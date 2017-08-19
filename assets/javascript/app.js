@@ -13,7 +13,15 @@ $.ajax({
 
   var results = result.response; 
   console.log(results);
-  // var headline
+  
+  // for (var i = 0; i < Things.length; i++) {
+  	
+  // }
+  var headline = results.docs[0].headline.main;
+  console.log(headline);
+
+	var author = results.docs[0].byline.original;
+	console.log(author);
 
 }).fail(function(err) {
   throw err;
