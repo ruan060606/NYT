@@ -14,14 +14,26 @@ $.ajax({
   var results = result.response; 
   console.log(results);
   
+
+  console.log(results.docs[0].multimedia);
   // for (var i = 0; i < Things.length; i++) {
   	
   // }
   var headline = results.docs[0].headline.main;
-  console.log(headline);
+  console.log('headline ' + headline);
 
 	var author = results.docs[0].byline.original;
-	console.log(author);
+	console.log('author ' + author);
+
+	var section = results.docs[0].multimedia.section_name;
+	console.log('section ' + section);
+
+	var date = results.docs[0].multimedia.pub_date;
+	console.log('date ' + date);
+
+	var link = results.docs[0].multimedia.web_url;
+	console.log('link ' +link);
+
 
 }).fail(function(err) {
   throw err;
